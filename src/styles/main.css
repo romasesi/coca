@@ -199,48 +199,6 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
-@font-face {
-  font-family: "Kumbh Sans";
-  src: url("../fonts/KumbhSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Kumbh Sans";
-  src: url("../fonts/KumbhSans-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 :root {
   --color-light: #FFFFFF;
   --color-dark: #141414 ;
@@ -669,9 +627,7 @@ button[aria-label]::before {
   }
 }
 
-.logo {
-  max-width: clamp(7.875rem, 7.0306372549rem + 3.4640522876vw, 11.1875rem);
-}
+
 
 .badge {
   display: inline-flex;

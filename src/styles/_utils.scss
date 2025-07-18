@@ -5,8 +5,11 @@
   padding-inline: var(--container-padding-x);
 }
 
-.visually-hidden {
-  @include visually-hidden;
+.visible-mobile {
+  @include mobile-above {
+    @include visually-hidden;
+  }
+
 }
 
 .hidden-mobile{

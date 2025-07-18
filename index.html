@@ -15,11 +15,99 @@
 </head>
 <body>
 <div id="app"></div>
+<header>
+  <div
+    class="header__body container"
+    data-js-header
+  >
+    <a
+      href="/"
+      class="header__logo"
+    >
+      <img
+        src="/public/images/logo-coca.svg"
+        alt=""
+        class="header__img"
+        width="140"
+        height="66"
+      >
+    </a>
 
-<h1>HEllo епта</h1>
+    <div
+      class="header__overlay"
+      data-js-header-overlay
+    >
+      <nav class="header__menu ">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a
+              href="/"
+              class="header__menu-link is-active"
+            >Home
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a
+              href="/"
+              class="header__menu-link"
+            >About
+            </a>
+          </li>
+          <li class="header__menu-item ">
+            <a
+              href="/"
+              class="header__menu-link"
+            >Blog
+            </a>
+          </li>
+          <li class="header__menu-item ">
+            <a
+              href="/"
+              class="header__menu-link"
+            >Pricing
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <a
+        href=""
+        class="header__button"
+      >
+        <button class="button button__no-line">Contact Us <span>
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+    >
+<path
+  d="M6.18182 11.4205L5.01136 10.2614L8.51705 6.75568H0V5.0625H8.51705L5.01136 1.5625L6.18182 0.397727L11.6932 5.90909L6.18182 11.4205Z"
+  fill="black"
+/>
+</svg>
+    </span></button>
+      </a>
+    </div>
+    <button
+      class="header__burger-button burger-button visible-mobile"
+      type="button"
+      aria-label="Open menu"
+      title="Open menu"
+      data-js-header-burger-button
+    >
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+    </button>
+
+
+  </div>
+</header>
+
 <script
   type="module"
-  src="/src/main.js"
+  src="/src/scripts/main.js"
 ></script>
 </body>
 </html>
