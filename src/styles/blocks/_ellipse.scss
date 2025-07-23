@@ -1,0 +1,49 @@
+@use '@/styles/helpers' as *;
+.hero {
+  position: relative;
+overflow: hidden;
+
+  //green
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 46%;
+    width: 60em;
+    height: 60em;
+    background: url("@/public/images/ellipse-gradient-green.svg") no-repeat center;
+    background-size: contain;
+    z-index: -1;
+
+    @include tablet {
+      width: 45em;
+      height: 45em;
+    }
+
+    @include mobile {
+      top: -5%;
+      left: 60%;
+    }
+  }
+
+  //orange
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2%;
+    right: 48%;
+    width: 50em;
+    height: 50em;
+    background: url("@/public/images/ellipse-gradient-orange.svg") no-repeat center;
+    background-size: contain;
+    z-index: -1;
+
+
+    @include mobile {
+      top: -12%;
+    }
+  }
+
+}
+
+

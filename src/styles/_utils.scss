@@ -5,6 +5,19 @@
   padding-inline: var(--container-padding-x);
 }
 
+.container-1450 {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  max-width: 2000px;
+  margin-inline: auto;
+
+}
+
+.visually-hidden {
+  @include visually-hidden
+}
+
 .visible-mobile {
   @include mobile-above {
     @include visually-hidden;

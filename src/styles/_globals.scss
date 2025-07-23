@@ -71,6 +71,17 @@ h4, .h4 {
   letter-spacing: -0.03em;
 }
 
+h5, .h5 {
+  @include fluid-text(20, 16);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+
+h6, .h6 {
+  @include fluid-text(16, 8);
+}
+
 
 
 
@@ -83,6 +94,13 @@ select,
 svg * {
   transition-duration: var(--transition-duration);
 }
+
+input {
+  background-color: transparent;
+  border: var(--border);
+  font-size: rem(14);
+  }
+
 
 a {
   color: inherit;

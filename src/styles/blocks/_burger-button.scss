@@ -5,6 +5,7 @@
   @include square(rem(34));
 
   display: inline-flex;
+  z-index: 100;
   flex-direction: column;
   justify-content: space-between;
   padding: rem(8.5) rem(4.25);

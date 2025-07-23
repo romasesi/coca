@@ -7,12 +7,16 @@
   --color-dark-100: #000000;
 
   --color-gray: #7E8492;
+  --color-gray-10: #5C616E;
   --color-border-gray: #EDEDED;
 
   --color-blue: #2280ff;
+  --color-green: #60D39C;
+  --color-red: #E35454;
 
   --border: #{rem(1)} solid var(--color-border-gray);
 
+  --box-shadow: 20px 40px 80px 0 rgba(89, 96, 135, 0.12);
 
   --font-family-base: 'Inter', sans-serif;
   --font-family-accent: 'Kumbh Sans', sans-serif;

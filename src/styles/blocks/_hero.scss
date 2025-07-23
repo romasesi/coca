@@ -1,0 +1,75 @@
+@use '@/styles/helpers' as *;
+
+.hero {
+
+  &__body {
+    display: flex;
+    column-gap: rem(97);
+    padding-bottom: rem(135);
+
+    @include laptop {
+      column-gap: rem(40);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(15);
+    }
+  }
+
+  &__content {
+    max-width: rem(617);
+    width: 55%;
+
+    &-title {
+      margin-block: rem(87) rem(114);
+
+      @include tablet {
+        margin-block: 32px 47px;
+      }
+
+      @include mobile {
+        margin-block: rem(32) rem(47);
+      }
+    }
+
+    &-form {
+      display: flex;
+      column-gap: rem(16);
+    }
+
+    &-input {
+      width: rem(280);
+      padding-bottom: rem(16);
+      border: 0 solid;
+      border-bottom: rem(1) solid var(--color-gray) ;
+
+      @include hover{
+        border-bottom: rem(3) solid var(--color-blue);
+      }
+
+      @include tablet {
+        max-width: rem(190);
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    &-subtitle {
+      max-width: rem(400);
+      margin-bottom: rem(70);
+
+      &::before {
+        height: rem(1);
+        width: rem(76);
+      }
+    }
+
+    @include mobile {
+      margin-bottom: rem(41);
+    }
+  }
+
+}

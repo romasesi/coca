@@ -1,20 +1,36 @@
 @use '@/styles/helpers' as *;
 
-.button {
+button {
+  @include fluid-text(16, 12);
+
   display: inline-block;
-  font-size: rem(16);
   text-align: center;
   font-weight: 700;
-  padding: rem(20) rem(16) rem(20) rem(16);;
+  color: var(--color-light);
+  padding: rem(16) rem(44) rem(16) rem(44);
+  border-radius: 100px;
+  background-color: var(--color-dark);
+  border: none;
+
+  @include tablet {
+    padding: rem(12) rem(22) rem(12) rem(22);
+  }
+
+  @include mobile {
+    padding: rem(8) rem(16) rem(8) rem(16);
+  }
 }
 
 .button__no-line {
   display: flex;
   align-items: center;
   column-gap: rem(6) ;
+  padding: rem(20) 0 rem(20) 0;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--color-dark);
+  border-radius: 0;
+  color: var(--color-dark);
   height: rem(30);
   @include mobile {
     @include visually-hidden

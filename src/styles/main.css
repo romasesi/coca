@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /**
   Нормализация блочной модели
@@ -215,7 +216,7 @@ svg * {
     var(--color-dark-15) 64%,
     var(--color-accent) 166%
   );
-  --border: 0.0625rem solid var(--color-dark-15);
+  --border: rem(1) solid var(--color-dark-15);
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "Kumbh Sans", sans-serif;
   --container-width: 100rem;
@@ -232,6 +233,11 @@ svg * {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+}
+
+.container-1450 {
+  max-width: rem(1450);
+  margin-inline: auto;
 }
 
 .visually-hidden {
