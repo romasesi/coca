@@ -1,0 +1,74 @@
+@use '@/styles/helpers' as *;
+.services {
+  --padding-block: #{rem(160)} 0 #{rem(100)} 0;
+  padding:var(--padding-block);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(32);
+
+  @include mobile {
+    --padding-block: #{rem(56)} 0 #{rem(56)} 0;
+  }
+ &__info {
+   display: flex;
+   flex-direction: column;
+   row-gap: rem(24);
+   max-width: 50%;
+
+   @include mobile {
+     row-gap: rem(16);
+     max-width: 100%;
+   }
+   &-description {
+     max-width: rem(462);
+   }
+ }
+
+  &__offers {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(64);
+      row-gap: rem(56);
+
+      @include tablet {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: rem(24);
+      }
+    }
+
+    &-item {
+      display: flex;
+      column-gap: rem(60);
+
+      @include laptop {
+        column-gap: rem(40);
+      }
+
+
+      @include mobile {
+        column-gap: rem(16);
+      }
+    }
+
+    &-img {
+      @include mobile {
+        max-width: rem(160);
+      }
+    }
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+
+    @include tablet {
+      max-width: rem(360);
+    }
+
+    @include mobile {
+      row-gap: rem(8);
+    }
+  }
+}

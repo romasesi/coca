@@ -57,6 +57,7 @@
    @include mobile {
      top: 0;
      left: 80%;
+     padding: rem(10) rem(10);
      max-width: rem(118);
      max-height: rem(122);
      font-size: rem(9);

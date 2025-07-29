@@ -1,0 +1,86 @@
+@use '@/styles/helpers' as *;
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(80);
+  --padding-inline: #{rem(66)} 0 #{rem(160)} 0;
+  padding: var(--padding-inline);
+
+  @include mobile {
+  --padding-inline: #{rem(26)} 0 #{rem(56)} 0;
+    row-gap: rem(40);
+}
+  &__top {
+    &-grid {
+      display: grid;
+      grid-template-columns:  max(248px) max(295px) max(343px) auto;
+
+      @include laptop {
+        grid-template-columns:  max(22%) auto max(30%) auto;
+      }
+
+      @include tablet {
+        grid-template-columns: max(55%) auto;
+        column-gap: rem(16);
+        row-gap: rem(16);
+      }
+    }
+
+    &-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(8);
+      padding: 0 72px 0 72px;
+
+      @include tablet {
+        padding: 0
+      }
+
+
+      &::before {
+        content: '';
+        position: absolute;
+        @include abs-center;
+        right: 0;
+        left: 100%;
+        width: rem(1);
+        height: 70%;
+        background-color: #CED1D8;
+
+
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:last-child::before {
+        display: none;
+      }
+
+      &:nth-child(2)::before {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
+  &__sale {
+    display: flex;
+    column-gap: rem(100);
+    &-description {
+      max-width: rem(421);
+      font-weight: 500;
+      line-height: 1.78;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+}

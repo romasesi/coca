@@ -1,0 +1,40 @@
+@use '@/styles/helpers' as *;
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+  column-gap: rem(30);
+  row-gap: rem(32);
+  padding: rem(86) 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+
+  @include mobile {
+    border: none;
+    flex-direction: column;
+    padding: 0 ;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(290);
+    row-gap: rem(16);
+
+    @include mobile {
+      row-gap: rem(8);
+    }
+  }
+
+  &__logos {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: rem(30);
+
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

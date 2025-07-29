@@ -1,0 +1,41 @@
+@use '@/styles/helpers' as *;
+.trending {
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(80);
+    --padding-block: #{rem(60)} 0 #{rem(90)} 0;
+    padding: var(--padding-block);
+
+
+    @include mobile {
+      --padding-block: #{rem(0)} 0 #{rem(0)} 0;
+      row-gap: rem(32);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+
+    @include mobile {
+      row-gap: rem(16);
+    }
+  }
+
+  &__attribute {
+    display: flex;
+    justify-content: space-between;
+    padding-block: rem(16);
+    font-size: rem(14);
+
+    @include mobile {
+      font-size: rem(12);
+      padding-block: rem(8)
+    }
+
+  }
+
+}

@@ -1,4 +1,7 @@
 @use '@/styles/helpers' as *;
+* {
+  outline: 1px solid red;
+}
 
 html {
   &.is-lock {
@@ -13,8 +16,11 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   line-height: 1.5;
-  color: var(--color-gray-50);
+  color: var(--color-gray);
   background-color: var(--color-light);
+  font-weight: 500;
+
+
 }
 
 main {
@@ -80,6 +86,7 @@ h5, .h5 {
 
 h6, .h6 {
   @include fluid-text(16, 8);
+  font-weight: 600;
 }
 
 

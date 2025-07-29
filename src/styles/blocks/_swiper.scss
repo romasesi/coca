@@ -1,0 +1,33 @@
+@use '@/styles/helpers' as *;
+
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+
+  &-slide {
+    width: 50%;
+  }
+
+}
+
+.drag-handle {
+  position: absolute;
+  top: 40%;
+  left: calc(47% + 4px);
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: grab;
+
+  @include mobile {
+    left: calc(24%);
+    top: 30%;
+    @include square(rem(40));
+  }
+}

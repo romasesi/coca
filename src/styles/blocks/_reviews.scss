@@ -1,0 +1,62 @@
+@use '@/styles/helpers' as *;
+
+.reviews {
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(112);
+    --padding-block: #{rem(70)} 0 #{rem(160)} 0;
+    padding: var(--padding-block);
+
+    @include mobile {
+      row-gap: rem(80);
+      --padding-block: #{rem(56)} 0 #{rem(80)} 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &-title {
+      max-width: 38%;
+    }
+
+    &-description {
+      max-width: rem(376);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(16);
+    }
+  }
+
+  &__swiper {
+    &-body {
+      max-width: rem(900);
+    }
+    &-title {
+      margin: rem(16) 0 rem(40) 0;
+
+      @include mobile {
+        margin: rem(11) 0 rem(8) 0;
+      }
+    }
+
+    &-stars {
+      display: flex;
+      justify-content: space-between;
+      color: var(--color-dark);
+
+      @include mobile {
+        justify-content: left;
+      }
+    }
+  }
+
+
+}
