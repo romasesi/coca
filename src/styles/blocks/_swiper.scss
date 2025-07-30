@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
 
   .swiper-wrapper {
     display: flex;
@@ -12,22 +12,35 @@
 
 
   &-slide {
-    width: 50%;
+    max-width: rem(582);
+  }
+
+  @include mobile {
+    max-width: rem(600);
   }
 
 }
 
 .drag-handle {
+
   position: absolute;
   top: 40%;
-  left: calc(47% + 4px);
+  left: calc(46% + 5px );
   transform: translateY(-50%);
   z-index: 10;
   cursor: grab;
+  border-radius: 50%;
+
+
+@include hover {
+  border: solid 4px var(--color-blue);
+
+}
 
   @include mobile {
     left: calc(24%);
-    top: 30%;
+    top: 40%;
+    left: calc(47% );
     @include square(rem(40));
   }
 }

@@ -18,8 +18,13 @@
   &__info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    column-gap: 30px;
+    width: 100%;
 
+    @include laptop {
+      flex-direction: column;
+      row-gap: rem(16);
+    }
 
     &-title {
       max-width: 38%;
@@ -36,9 +41,19 @@
   }
 
   &__swiper {
-    &-body {
-      max-width: rem(900);
+    width: auto;
+    &-wrapper {
+    width: auto;
+  }
+    &-slide {
+      width: auto;
     }
+
+    &-body {
+      padding-left: rem(157);
+      max-width: rem(1040);
+    }
+
     &-title {
       margin: rem(16) 0 rem(40) 0;
 
@@ -49,7 +64,7 @@
 
     &-stars {
       display: flex;
-      justify-content: space-between;
+      column-gap: rem(8);
       color: var(--color-dark);
 
       @include mobile {
@@ -58,5 +73,43 @@
     }
   }
 
+  &__author {
+    &-wrapper {
+      display: flex;
+      column-gap: rem(24);
+    }
 
+    &-navigation {
+      display: flex;
+      gap: 12px; // или сколько нужно между кнопками
+      justify-content: flex-end; // выравнивание вправо
+      align-items: center; // по вертикали, если нужно
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: static;
+        transform: none;
+        width: 32px;
+        height: 32px;
+        @include square(50px);
+        border-radius: 50%;
+        color: var(--color-light);
+
+        @include hover {
+          background-color: var(--color-gray);
+        }
+      }
+      .swiper-button-prev {
+        background: url("@/public/icons/arrow-left.svg") no-repeat center var(--color-dark);
+      }
+      .swiper-button-next {
+        background: url("@/public/icons/arrow-right.svg") no-repeat center var(--color-dark);
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        content: none; // или display: none;
+      }
+    }
+  }
 }
